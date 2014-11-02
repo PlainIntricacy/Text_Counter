@@ -41,6 +41,7 @@ public class Main {
     }
 
     public static int calc_sen(String q){
+        //Calculates the number of sentences
         int sum=0;
         for(int i=0; i<q.length(); i++){
             if(q.charAt(i)=='.'||q.charAt(i)=='!'||q.charAt(i)=='?'){
@@ -51,6 +52,7 @@ public class Main {
     }
 
     public static int calc_words(String q){
+        //Calculates the number of words
         int sum=0;
         String[] parts = q.toUpperCase().split(" ");
         for(int i=0; i<parts.length; i++){
@@ -62,6 +64,7 @@ public class Main {
     }
 
     public static int calc_letters(String q){
+        //Calculates the number of letters
         String temp = q.toUpperCase();
         int sum=0;
         for(int i=0; i<temp.length(); i++){
@@ -73,6 +76,7 @@ public class Main {
     }
 
     public static int calc_nums(String q){
+        //Calculates the number of numbers (not digits)
         int sum=0;
         for(int i=0; i<q.length()-1; i++){
             if(digits.indexOf(q.charAt(i))!=-1&&digits.indexOf(q.charAt(i+1))==-1){
@@ -83,6 +87,7 @@ public class Main {
     }
 
     public static int calc_digs(String q){
+        //Calculates the number of digits
         int sum=0;
         for(int i=0; i<q.length(); i++){
             if(digits.indexOf(q.charAt(i))!=-1){
@@ -93,6 +98,7 @@ public class Main {
     }
 
     public static int calc_sym(String q){
+        //Calculates the number of symbols (not part of alphabet or digits variables)
         int sum=0;
         String temp = q.toUpperCase();
         for(int i=0; i<temp.length(); i++){
